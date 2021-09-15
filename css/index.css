@@ -1,0 +1,73 @@
+@import './buttons.css';
+
+:root {
+  --Back: #000;
+  --Text: #ffffff; 
+}
+
+body {
+  color: var(--Text);
+  background-color: var(--Back);
+  font-family:'Inter';
+  background-image: url('../images/fondo1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  max-inline-size: 900px;
+  margin: auto;
+}
+
+.player{
+  margin-block-start: 100px;
+  position: relative;
+}
+
+.player video{
+  inline-size: 100%;
+  aspect-ratio: 16/9;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.overlay{
+  opacity: 1;
+  transition: .3s opacity;
+}
+
+.player:not(:hover) .overlay{
+  opacity: 0;
+  transition: .3s opacity;
+}
+
+.player-title{
+  color: white;
+  position: absolute; 
+  inset-block-start: 0;
+  inset-inline-start: 20px;
+}
+
+.actions{
+  position: absolute; 
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.player-progress{
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: 0;
+  display: flex;
+  padding: 10px;
+}
+
+.player-progress input{
+  flex: 1;
+  cursor: pointer;
+}
+
